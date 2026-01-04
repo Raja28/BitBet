@@ -92,12 +92,11 @@ Example slices:
 ### Authentication APIs
 
 | Method | Endpoint           | Description                     | Auth Required |
-| ------ | ------------------ | ------------------------------- | ------------- | --- |
+| ------ | ----------------- | ------------------------------- | ------------- |
 | POST   | /api/auth/register | Register a new user             | No            |
 | POST   | /api/auth/login    | Login user and return JWT token | No            |
-| POST   | /api/auth/logout   | User logout                     | No            | No  |
+| POST   | /api/auth/logout   | User logout                     | Yes           |
 
----
 
 ### Games / Matches APIs
 
