@@ -1,6 +1,6 @@
 
 // const { PrismaClient } = require('../prisma/generated');
-const { PrismaClient } = require("@prisma/client"); 
+const { PrismaClient } = require("@prisma/client");
 require("dotenv").config();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -121,12 +121,13 @@ exports.login = async (req, res) => {
         res.cookie("jwtToken", token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "strict",
-            maxAge: 24 * 60 * 60 * 1000, // 1 days in ms
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+            maxAge: 24 * 60 * 60 * 1000,
         });
 
+
         console.log(favorites)
-     
+
         return res.status(200).json({
             success: true,
             message: "Login successful",
