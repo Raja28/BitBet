@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const { PrismaClient } = require('../prisma/generated');
+const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 const SECRET_KEY = process.env.SECRET_KEY || "fallback_secret";
 
