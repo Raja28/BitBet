@@ -1,4 +1,5 @@
-const { PrismaClient } = require('../prisma/generated');
+// const { PrismaClient } = require('../prisma/generated');
+const { PrismaClient } = require("@prisma/client"); 
 const prisma = new PrismaClient();
 
 exports.fetchGames = async (req, res) => {
