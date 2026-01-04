@@ -7,6 +7,10 @@ This project focuses on authentication, listing games or matches, filtering, man
 
 Visit the website: [BitBet](https://bit-bet-client.vercel.app)
 
+## guest Login
+- Id: test1@gmail.com
+- password: 123@Abcd
+
 ## Problem Statement
 
 Build a Mini Sports Games Platform where users can:
