@@ -28,5 +28,6 @@ dist-ssr
 # Env
 .env
 # Prisma generated files
-node_modules/.prisma
-/prisma/generated
+node_modules
+.prisma
+prisma/generated
