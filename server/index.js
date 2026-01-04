@@ -7,11 +7,11 @@ const cors = require("cors");
 app.use(express.json())
 const port = process.env.PORT || 2027;
 
-const { PrismaClient } = require('./prisma/generated');
+const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 app.use(cors({
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173', "https://bit-bet-server.vercel.app"],
     credentials: true
 }));
 
