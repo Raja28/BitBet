@@ -25,18 +25,19 @@ const userGames = require("./routes/user.route")
 app.use("/api/auth", userAuth);
 app.use("/api", userGames);
 
-async function startServer() {
-    try {
-        await prisma.$connect();
-        console.log("✅ Database connected successfully");
+// async function startServer() {
+//     try {
+//         await prisma.$connect();
+//         console.log("✅ Database connected successfully");
 
-        app.listen(port, () => {
-            console.log(`🚀 Server running on port ${port}`);
-        });
-    } catch (error) {
-        console.error("❌ Database connection failed:", error.message);
-        process.exit(1);
-    }
-}
+//         app.listen(port, () => {
+//             console.log(`🚀 Server running on port ${port}`);
+//         });
+//     } catch (error) {
+//         console.error("❌ Database connection failed:", error.message);
+//         process.exit(1);
+//     }
+// }
 
-startServer();
+// startServer();
+module.exports = app;
